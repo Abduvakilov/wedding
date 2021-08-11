@@ -1,0 +1,110 @@
+/* body {
+  height: 100vh;
+  padding: 0;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Parisienne&display=swap');
+.container {
+  height: 100vh;
+  position: relative;
+}
+@media screen and (min-width: 600px) {
+  .center {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .card {
+    box-shadow: 15px 15px 25px 0 rgb(0 0 0 / 20%), 3px 3px 12px 0 rgb(0 0 0 / 20%);
+    position: relative;
+  }
+  .envelope {
+    max-width: 1400px !important;
+    height: 120%;
+    background-image: url('../img/envelope.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  .name {
+    display: block;
+    font-size: 6rem;
+  }
+  .left-img-bg,
+  .right-img-bg {
+    z-index: -1;
+  }
+  .card,
+  .left-img-bg,
+  .right-img-bg {
+    min-height: 800px !important;
+  }
+}
+.card {
+  background-color: #efece7;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+.card,
+.wrapper,
+.left-img-bg,
+.right-img-bg {
+  max-width: 600px;
+  min-height: 100%;
+}
+.card {
+  position: relative;
+}
+.first-section,
+.second-section,
+third-section {
+  z-index: 3;
+}
+.first-section {
+  width: 50%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+.second-section {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+.second-section > span:nth-child(2) {
+  margin-left: 50%;
+}
+.second-section > span:nth-child(3) {
+  margin-left: 30%;
+}
+.left-img-bg,
+.right-img-bg {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.left-img-bg {
+  background-size: 60%;
+  background-image: url('../img/top-left.jpg');
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.right-img-bg {
+  background-size: 60%;
+  background-image: url('../img/bottom-right.jpg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.name {
+  display: block;
+  font-size: 4rem;
+  font-family: 'Parisienne', cursive;
+}
