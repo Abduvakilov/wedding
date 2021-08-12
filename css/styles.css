@@ -12,10 +12,9 @@
     width: 100%;
     margin: 0;
     position: absolute;
-    top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -ms-transform: translatex(-50%) !important;
+    transform: translatex(-50%) !important;
   }
   .card {
     box-shadow: 15px 15px 25px 0 rgb(0 0 0 / 20%), 3px 3px 12px 0 rgb(0 0 0 / 20%);
@@ -63,6 +62,7 @@ p {
 .second-section,
 third-section {
   z-index: 3;
+  opacity: 1;
 }
 .first-section {
   width: 50%;
@@ -91,14 +91,14 @@ third-section {
 }
 
 .left-img-bg {
-  background-size: 60%;
+  background-size: 80%;
   background-image: url('../img/top-left.jpg');
   background-repeat: no-repeat;
   background-position: left top;
 }
 
 .right-img-bg {
-  background-size: 60%;
+  background-size: 80%;
   background-image: url('../img/bottom-right.jpg');
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -107,4 +107,19 @@ third-section {
   display: block;
   font-size: 4rem;
   font-family: 'Parisienne', cursive;
+}
+
+@media screen and (min-height: 800px) {
+  .center {
+    top: 50%;
+    -ms-transform: translatey(-50%);
+    transform: translatey(-50%);
+  }
+}
+
+@media screen and (min-width: 600px) and (min-height: 800px) {
+  .center {
+    -ms-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+  }
 }
