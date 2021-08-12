@@ -2,7 +2,12 @@
   height: 100vh;
   padding: 0;
 } */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Parisienne&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Parisienne&family=Raleway&display=fallback');
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 .container {
   height: 100vh;
   position: relative;
@@ -44,7 +49,7 @@
 .card {
   background-color: #efece7;
 }
-p {
+p, .fourth-section {
   font-family: 'Open Sans', sans-serif;
 }
 .card,
@@ -59,7 +64,8 @@ p {
 }
 .first-section,
 .second-section,
-.third-section {
+.third-section,
+.fourth-section {
   z-index: 3;
   opacity: 1;
 }
@@ -89,6 +95,12 @@ p {
   -ms-transform: translateX(-50%);
   font-family: 'Raleway', sans-serif;
   font-size: 1.4rem;
+}
+.fourth-section {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  width: 100%
 }
 /*
 .divider:before {
@@ -131,7 +143,7 @@ p {
   display: block;
   font-size: 4rem;
   font-family: 'Parisienne', cursive;
-  padding:  8px;
+  padding: 8px;
 }
 
 @media screen and (min-height: 800px) {
