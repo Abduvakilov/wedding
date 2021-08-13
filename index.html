@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="./css/styles.css">
   <!-- <link rel="stylesheet" href="./css/print.css" media="print"> -->
 
-  <meta name="description" content="Dilshodjon va Nasiba toʻyiga taklifnoma">
+  <meta name="description" content="Dilshodjon va Nasibaxon toʻyiga taklifnoma">
   <meta property="og:title" content="Taklifnoma">
-  <meta property="og:description" content="Dilshodjon va Nasiba toʻyi - 9-sentabr">
+  <meta property="og:description" content="Dilshodjon va Nasibaxon toʻyi - 9-sentabr">
   <meta property="og:image" content="https://abduvakilov.github.io/wedding/img/image.jpg">
   <meta property="og:image:alt" content="Taklifnoma">
   <meta property="og:locale" content="uz_UZ">
@@ -30,14 +30,16 @@
     <div class="envelope center"></div>
     <div class="card center">
       <div class="first-section">
+        <p id="to"></p>
         <p>Sizni nikoh toʻyimizga <br>taklif qilamiz</p>
       </div>
       <div class="second-section">
         <span class="name fade-in">Dilshodjon</span>
         <span>VA</span>
-        <span class="name fade-in">Nasiba</span>
+        <span class="name fade-in">Nasibaxon</span>
       </div>
       <div class="third-section">
+        <a href="webcal://https://abduvakilov.github.io/wedding/DNWedding.ics">
         <span class="day">
           Payshanba
         </span>
@@ -49,11 +51,15 @@
         <span class="month">
           Sentabr
         </span>
+        </a>
       </div>
       <div class="fourth-section">
-        <a href="https://yandex.com/maps/-/CCUibSSb9C">
-          Manzil: Oqsaroy restorani
-        </a>
+        <p></p>
+          <a href="https://yandex.com/maps/-/CCUibSSb9C">
+            Manzil: Oqsaroy restorani
+          </a>
+        </p>
+        <p id="by"></p>
         <p>2021</p>
       </div>
       <div class="left-img-bg"></div>
@@ -61,7 +67,24 @@
     </div>
   </div>
   <script>
-
+    function getParameterByName(name, url = window.location.href) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+    var byParam = getParameterByName('by');
+    var toParam = getParameterByName('to');
+    if (byParam) {
+      var by = document.getElementById('by')
+      by.innerText = "Xurmat ila, \n" + byParam.replace(/([A-Z])/g, ' $1').trim()
+    }
+    if (toParam) {
+      var to = document.getElementById('to')
+      to.innerText = toParam.replace(/([A-Z])/g, ' $1').trim()
+    }
   </script>
 </body>
 
