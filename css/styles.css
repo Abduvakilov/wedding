@@ -12,7 +12,7 @@ a {
   position: relative;
   overflow-x: hidden;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 470px) {
   .second-section {
     left: 30px !important;
   }
@@ -28,6 +28,13 @@ a {
     top: 65% !important;
     left: 30px !important;
     width: 100%
+  }
+}
+@media screen and (min-width: 470px) {
+  .time {
+    text-align: center;
+    margin-top: 16px;
+    margin-left: 30px;
   }
 }
 @media screen and (min-width: 600px) {
